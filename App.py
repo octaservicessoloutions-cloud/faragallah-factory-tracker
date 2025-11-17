@@ -46,7 +46,7 @@ def get_google_sheet():
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
     
-    sheet = client.open("FARAGALLAH").sheet1
+    sheet = client.open_by_key("1urBkSsjlV2rO-uPbwbyKcjE_fl2lGnRD6tgNQEcXIMc").sheet1
     return sheet
 
 # Load data from sheet
